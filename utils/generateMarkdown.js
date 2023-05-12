@@ -40,7 +40,7 @@ function generateMarkdown(data) {
    - [Licenses](#Licenses)<br/>
    - [Contributions Guidelines](#Contributions-guidelines)<br/>
    - [Tests Instrictions](#Tests-Instrictions)<br/>
-   - [How to reach for questions](#How-to-reach-for-questions:)<br/>
+   - [How to reach for questions](#How-to-reach-for-questions)<br/>
 
 
   ## Installation Instructions
@@ -63,7 +63,7 @@ function generateMarkdown(data) {
 
   &nbsp;&nbsp;&nbsp;&nbsp;${data.tests}
 
-  ## How to reach for questions:
+  ## How to reach for questions
 
   &nbsp;&nbsp;&nbsp;&nbsp;${data.questions1}<br/>
   &nbsp;&nbsp;&nbsp;&nbsp;${data.questions2}`
