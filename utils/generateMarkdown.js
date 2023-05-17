@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// this function selects the corrisponding badge to the users lincese selection
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license === "MIT"){
@@ -18,20 +18,47 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// this function selects the corrisponding link to the users lincese selection
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseLink(license) {
+  if(license === "MIT"){
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  }
+  else if(license === "Mozilla"){
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+  }
+  else if(license === "IBM"){
+    return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
+  }
+  else if(license === "Eclipse"){
+    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+  }
+  else{
+    return ""
+  }
 }
 
-// TODO: Create a function to generate markdown for README
+// this function renders the whole license section
+// If no license is selected then the section will not exist
+function renderLicenseSection(license) {
+  if(license === "none"){
+    return ""
+  }
+  else{
+    return `
+  ## Licenses
+  &nbsp;&nbsp;&nbsp;&nbsp;The Lincese used in this application is the ${license} license.
+  `
+  }
+}
+
+// this function takes in the users responses and will generate the README files structure using template literals.
+// adds users input into the file as well.
 function generateMarkdown(data) {
-  return `# ${data.title} 
-  ## Description 
-  
+  return `${renderLicenseBadge(data.license)}
+  # ${data.title}
+  ## Description
+
    &nbsp;&nbsp;&nbsp;&nbsp;${data.discription} 
 
   ## Table of Contents
@@ -51,15 +78,13 @@ function generateMarkdown(data) {
 
   &nbsp;&nbsp;&nbsp;&nbsp;${data.usage}
 
-  ## Licenses
-
-  &nbsp;&nbsp;&nbsp;&nbsp;${data.licenses}
+  ${renderLicenseSection(data.license)}
 
   ## Contributions guidelines
 
   &nbsp;&nbsp;&nbsp;&nbsp;${data.contributions}
 
-  ## Tests Instrictions
+  ## Tests Instructions
 
   &nbsp;&nbsp;&nbsp;&nbsp;${data.tests}
 
@@ -69,9 +94,8 @@ function generateMarkdown(data) {
   &nbsp;&nbsp;&nbsp;&nbsp;${data.questions2}`
 }
 
+// must use module.exports to use functions defined in this file in other files 
+// must use require in other files to gain access to this files module exports 
 module.exports = {
-  generateMarkdown,
-  renderLicenseBadge,
-  renderLicenseLink,
-  renderLicenseSection,
+  generateMarkdown
 };

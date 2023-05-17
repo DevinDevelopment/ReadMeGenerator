@@ -1,10 +1,11 @@
-// TODO: Include packages needed for this application
+// imports. requrire is needed to use functions defined in generateMarkdown file
+// inquirer is a node.js library and is need to ask questions in command line and store answers
+// fs needed to gain access to file structor functions 
 const generateMarkdown = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
 const fs = require('fs');
-// title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
-// TODO: Create an array of questions for user input
+// this is used as a question bank
 const questions = [
   'What is your title?',
   'What is the discription?',
@@ -17,14 +18,16 @@ const questions = [
   'Enter your email for questions.'
 ];
 
-// TODO: Create a function to write README file
+// this is a function created to write to a file. 
+// we will use this function in the .then section of the inquirer function.
 function writeToFile(fileName, data) {
   fs.appendFile(fileName, data, (err) =>
     // TODO: Describe how this ternary operator works
     err ? console.error(err) : console.log('Success'))
 }
 
-// TODO: Create a function to initialize app
+// this function is the actuall inquirer which will ask questions in the command line 
+// then will store answers in response
 function init() {
     inquirer
   .prompt([
@@ -51,8 +54,8 @@ function init() {
     {
       type: 'list',
       message: questions[4],
-      name: "licenses",
-      choices: ['MIT', 'Mozilla', 'IBM', 'Eclipse'],
+      name: "license",
+      choices: ['MIT', 'Mozilla', 'IBM', 'Eclipse', 'none'],
     },
     {
       type: 'input',
@@ -75,8 +78,11 @@ function init() {
       name: 'questions2',
     },
   ])
+  // take the respone(users answers) and call the writeToFile function we created
+  // the data perameter will take the users response and push to our generateMarkdown function from the generateMarkdown file
+  // generateMarkdown will be a function we are calling from another file which is why import require is needed
   .then((response) =>
-    writeToFile('README.MD', generateMarkdown.generateMarkdown(response))
+    writeToFile('GeneratedREADME.MD', generateMarkdown.generateMarkdown(response))
   );
 }
 
