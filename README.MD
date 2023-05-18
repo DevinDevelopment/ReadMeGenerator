@@ -47,6 +47,14 @@ After answering all the questions needed to generate the readme file you will no
 
 ![Website screenshot](./assets/images/Capture4.PNG)
 
+## Videos Demonstrating application:
+
+Table of contents showcase:
+https://app.screencastify.com/manage/videos/AuJvLsyFlstGZO2nYn6E
+
+application functionality showcase:
+https://app.screencastify.com/manage/videos/X0YN69IKvjkzUIFtB1jh
+
 
 ## Deployment
 
