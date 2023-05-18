@@ -1,5 +1,5 @@
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-  # Readme Generator
+  # Readme generator
   ## Description
 
    &nbsp;&nbsp;&nbsp;&nbsp;this is a discription created to showcase my application. This application takes in user input from the console using the node inquirer library. This application also uses fs to write to a file which would be the readme file that would be created with users input. 
