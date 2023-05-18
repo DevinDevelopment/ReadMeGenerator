@@ -37,8 +37,15 @@ After answering all the questions needed to generate the readme file you will no
 
 
 ![Website screenshot](./assets/images/Capture1.PNG)
+
+
 ![Website screenshot](./assets/images/Capture2.PNG)
+
+
 ![Website screenshot](./assets/images/Capture3.PNG)
+
+
+![Website screenshot](./assets/images/Capture4.PNG)
 
 
 ## Deployment
