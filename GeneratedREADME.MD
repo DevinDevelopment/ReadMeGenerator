@@ -9,7 +9,7 @@
    - [Usage](#Usage)<br/>
    - [Licenses](#Licenses)<br/>
    - [Contributions Guidelines](#Contributions-guidelines)<br/>
-   - [Tests Instrictions](#Tests-Instrictions)<br/>
+   - [Tests Instrictions](#Tests-Instructions)<br/>
    - [How to reach for questions](#How-to-reach-for-questions)<br/>
 
 
