@@ -50,10 +50,10 @@ After answering all the questions needed to generate the readme file you will no
 ## Videos Demonstrating application:
 
 Table of contents showcase:
-https://app.screencastify.com/manage/videos/AuJvLsyFlstGZO2nYn6E
+https://drive.google.com/file/d/1kshl7OMiItqJV28xPVHjw4GpBXaipAzi/view
 
 application functionality showcase:
-https://app.screencastify.com/manage/videos/X0YN69IKvjkzUIFtB1jh
+https://drive.google.com/file/d/16km-5pONA6Og9bzfQDNFYe9a5YQ4Qbtl/view
 
 
 ## Deployment
