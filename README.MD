@@ -60,8 +60,6 @@ https://drive.google.com/file/d/16km-5pONA6Og9bzfQDNFYe9a5YQ4Qbtl/view
 
 Repo: https://github.com/devv-nunn/ReadMeGenerator
 
-GitPage: https://devv-nunn.github.io/ReadMeGenerator/
-
 # Tech Stack
 
 HTML
