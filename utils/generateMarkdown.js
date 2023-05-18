@@ -22,16 +22,16 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license === "MIT"){
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    return "https://opensource.org/licenses/MIT"
   }
   else if(license === "Mozilla"){
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    return "https://opensource.org/licenses/MPL-2.0"
   }
   else if(license === "IBM"){
-    return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
+    return "https://opensource.org/licenses/IPL-1.0"
   }
   else if(license === "Eclipse"){
-    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+    return "https://opensource.org/licenses/EPL-1.0"
   }
   else{
     return ""
@@ -47,7 +47,8 @@ function renderLicenseSection(license) {
   else{
     return `
   ## Licenses
-  &nbsp;&nbsp;&nbsp;&nbsp;The Lincese used in this application is the ${license} license.
+  &nbsp;&nbsp;&nbsp;&nbsp;The Lincese used in this application is the ${license} license.<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;Link to license: ${renderLicenseLink(license)}
   `
   }
 }
